@@ -27,6 +27,16 @@ Documento di specifica per il sito aziendale **EPICODE**, basato sul transcript 
   * **Contatti** (form contatti e info)
 * Rispetto della struttura grafica mostrata in preview: proporzioni del banner, spaziatura, colori, linee decorative (es. “linetta” sotto ai titoli).
 
+BUTTON: sfondo e bordo hsl(20, 30%, 35%)
+BUTTON HOVER: sfondo e bordo hsl(20, 30%, 27%)
+SFONDO PRINCIPALE: hsl(20, 30%, 35%)
+SFONDO NAV: hsl(20, 20%, 15%)
+SFONDO HERO: hsl(20, 30%, 35%)
+BOX SHADOW CARD: 0 2px 6px rgba(0, 0, 0, 0.08)
+BOX SHADOW CARD HOVER: 0 10px 24px rgba(0, 0, 0, 0.12)
+SFONDO FOOTER: hsl(20, 20%, 15%)
+LINK FOOTER HOVER: hsl(40, 30%, 90%)
+
 ### Requisiti facoltativi
 * **Sezione Lavori (portfolio)** come sezione aggiuntiva opzionale tra Studio/Servizi o Servizi/Contatti.
 * Eventuali **pagine secondarie** (es. pagina di ringraziamento post invio form) come extra.

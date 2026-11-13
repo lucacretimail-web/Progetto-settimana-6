@@ -1,0 +1,93 @@
+/* Atelier — stile sopra Bootstrap 5.3.3 (CDN)
+
+   Sorgente: si compila con `npx sass@1.106.1 --no-source-map style.scss style.css`. style.css è generato, non si modifica a mano.
+   Ordine: variabili, mixin, poi i blocchi nell'ordine della pagina (navbar, hero, titoli di sezione, card, pulsanti, footer). */
+
+@use 'sass:color';
+
+/* Variabili: la palette delle istruzioni */
+$brand: hsl(20, 30%, 35%);
+$brand-hover: hsl(20, 30%, 27%);
+$scuro: hsl(20, 20%, 15%);
+$link-footer-hover: hsl(40, 30%, 90%);
+$ombra-card: 0 2px 6px rgba(0, 0, 0, 0.08);
+$ombra-card-hover: 0 10px 24px rgba(0, 0, 0, 0.12);
+
+/* Mixin lift: ombra che cresce all'hover; il sollevamento e la transizione solo se l'utente non chiede movimento ridotto */
+@mixin lift {
+  box-shadow: $ombra-card;
+
+  &:hover {
+    box-shadow: $ombra-card-hover;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+/* Navbar: marrone scuro; i colori chiari di testi e hamburger li dà data-bs-theme="dark" */
+.navbar {
+  background-color: $scuro;
+}
+
+/* Hero: almeno l'80% dello schermo (nessuna classe Bootstrap lo fa); l'h1 scala da 2rem su mobile a 3rem su desktop */
+.hero {
+  min-height: 80vh;
+  background-color: $brand;
+
+  h1 {
+    font-size: clamp(2rem, 3vw + 1rem, 3rem);
+  }
+}
+
+/* Titoli di sezione: la «linetta» marrone centrata sotto l'h2 (solo nelle section, non nel footer) */
+section h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin: 0.75rem auto 0;
+  background-color: $brand;
+}
+
+/* Card di servizi e lavori: stessa ombra e stesso lift */
+.card {
+  @include lift;
+}
+
+/* Pulsanti: .btn-brand riscrive le variabili di .btn; il focus ad anello serve perché .btn da solo non ha un colore per il suo box-shadow */
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #{$brand};
+  --bs-btn-border-color: #{$brand};
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #{$brand-hover};
+  --bs-btn-hover-border-color: #{$brand-hover};
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #{$brand-hover};
+  --bs-btn-active-border-color: #{$brand-hover};
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem #{color.change($brand, $alpha: 0.5)};
+}
+
+/* Footer: marrone scuro, testi chiari all'80%; i link passano al crema all'hover.
+   Il padding porta i link da 16,5px a 24,5px di altezza: 24px è il minimo da toccare con un dito (WCAG 2.2, segnalato da Lighthouse) */
+.footer {
+  background-color: $scuro;
+  color: rgba(255, 255, 255, 0.8);
+
+  a {
+    display: inline-block;
+    padding-block: 0.25rem;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-footer-hover;
+    }
+  }
+}

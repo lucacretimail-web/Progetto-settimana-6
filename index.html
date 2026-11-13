@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier — Studio di Architettura</title>
+    <meta name="description" content="Atelier, studio di architettura a Milano: progettazione residenziale, interior design e ristrutturazioni.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- Navbar: espansa da 768px (md), sotto diventa hamburger con il menu in verticale -->
+    <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Navigazione principale">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#studio">Atelier</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Apri il menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#studio">Studio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
+            <li class="nav-item"><a class="nav-link" href="#lavori">Lavori</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+
+      <!-- Hero: presentazione dello studio -->
+      <section id="studio" class="hero d-flex align-items-center justify-content-center text-center text-white">
+        <div class="container">
+          <h1 class="fw-bold">Architettura per spazi che parlano</h1>
+          <p class="lead">Progettiamo case, uffici e spazi commerciali con attenzione alla luce, ai materiali e al contesto.</p>
+          <a href="#contatti" class="btn btn-brand">Inizia un progetto</a>
+        </div>
+      </section>
+
+      <!-- Servizi: 3 card, una per riga sotto 768px e affiancate da md -->
+      <section id="servizi" class="py-5">
+        <div class="container text-center">
+          <h2 class="fw-bold">I nostri servizi</h2>
+          <p class="text-body-secondary mb-5">Tre aree di lavoro, una sola attenzione alla qualità.</p>
+          <div class="row g-4">
+            <div class="col-12 col-md-4">
+              <article class="card h-100 border-0 p-4">
+                <span class="fs-1" aria-hidden="true">🏠</span>
+                <h3 class="h5 fw-bold mt-3">Progettazione residenziale</h3>
+                <p class="text-body-secondary small mb-0">Case private, ville e ristrutturazioni domestiche, dal sopralluogo alla consegna delle chiavi.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-4">
+              <article class="card h-100 border-0 p-4">
+                <span class="fs-1" aria-hidden="true">🪑</span>
+                <h3 class="h5 fw-bold mt-3">Interior design</h3>
+                <p class="text-body-secondary small mb-0">Allestimenti d'interno per case e uffici, con materiali selezionati e arredo su misura.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-4">
+              <article class="card h-100 border-0 p-4">
+                <span class="fs-1" aria-hidden="true">🧱</span>
+                <h3 class="h5 fw-bold mt-3">Ristrutturazioni</h3>
+                <p class="text-body-secondary small mb-0">Riqualificazione di spazi esistenti, gestione dei lavori e coordinamento con le imprese.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lavori: 6 card con foto Unsplash (licenza libera, 800×600 WebP), titolo e descrizione-->
+      <section id="lavori" class="py-5">
+        <div class="container text-center">
+          <h2 class="fw-bold">I nostri lavori</h2>
+          <p class="text-body-secondary mb-5">Alcuni progetti realizzati negli ultimi anni.</p>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 border-0">
+                <img src="assets/img/lavoro-1.webp" class="card-img-top img-fluid" alt="Villa moderna bianca a tre piani con piscina" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Villa Levante</h3>
+                  <p class="text-body-secondary small mb-0">Tre livelli con terrazze vetrate e una piscina con cascata.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 border-0">
+                <img src="assets/img/lavoro-2.webp" class="card-img-top img-fluid" alt="Casa bianca a volumi squadrati tra gli alberi" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Casa tra i pini</h3>
+                  <p class="text-body-secondary small mb-0">Volumi squadrati in intonaco bianco, pensati per la luce del Mediterraneo.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 border-0">
+                <img src="assets/img/lavoro-3.webp" class="card-img-top img-fluid" alt="Scala interna in legno in un ambiente luminoso" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Loft Navigli</h3>
+                  <p class="text-body-secondary small mb-0">Ristrutturazione su due piani con una nuova scala in rovere e ferro.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 border-0">
+                <img src="assets/img/lavoro-4.webp" class="card-img-top img-fluid" alt="Cucina in legno chiaro con porta vetrata sul giardino" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Cucina sul giardino</h3>
+                  <p class="text-body-secondary small mb-0">Arredo su misura in legno chiaro, aperto sul verde con una grande vetrata.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 border-0">
+                <img src="assets/img/lavoro-5.webp" class="card-img-top img-fluid" alt="Casa a un piano con grandi vetrate e piscina" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Casa Patio</h3>
+                  <p class="text-body-secondary small mb-0">Un solo piano con vetrate scorrevoli che portano dritte alla piscina.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 border-0">
+                <img src="assets/img/lavoro-6.webp" class="card-img-top img-fluid" alt="Villa a due piani con piscina e giardino" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                  <h3 class="h6 fw-bold">Villa delle Terrazze</h3>
+                  <p class="text-body-secondary small mb-0">Due piani in mattone e intonaco, con terrazze e piscina sul prato.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contatti: form visibile, largo 8/12 da md e 6/12 da lg -->
+      <section id="contatti" class="py-5 bg-body-tertiary">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="fw-bold">Contattaci</h2>
+            <p class="text-body-secondary mb-5">Compila il form, ti rispondiamo entro 48 ore.</p>
+          </div>
+          <div class="row">
+            <form id="form-contatti" class="col-12 col-md-8 col-lg-6 mx-auto">
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" id="nome" name="nome" class="form-control" autocomplete="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" autocomplete="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo di progetto</label>
+                <select id="tipo" name="tipo" class="form-select" required>
+                  <option>Residenziale</option>
+                  <option>Interior design</option>
+                  <option>Ristrutturazione</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="messaggio" class="form-label">Messaggio</label>
+                <textarea id="messaggio" name="messaggio" class="form-control" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-brand w-100">Invia</button>
+              <p id="grazie" class="alert alert-success mt-3 mb-0" role="status" hidden>Grazie! Abbiamo ricevuto il tuo messaggio, ti rispondiamo entro 48 ore.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: 3 colonne in linea e copyright -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <h2 class="h6 fw-bold">Atelier</h2>
+            <p class="small mb-0">Studio di architettura<br>Via dei Pioppi 12, Milano</p>
+          </div>
+          <div class="col-12 col-md-4">
+            <h2 class="h6 fw-bold">Link</h2>
+            <ul class="list-unstyled small mb-0">
+              <li><a href="#studio">Studio</a></li>
+              <li><a href="#servizi">Servizi</a></li>
+              <li><a href="#lavori">Lavori</a></li>
+              <li><a href="#contatti">Contatti</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4">
+            <h2 class="h6 fw-bold">Contatti</h2>
+            <ul class="list-unstyled small mb-0">
+              <li><a href="mailto:info@atelier.example">info@atelier.example</a></li>
+              <li><a href="tel:+390200001111">+39 02 0000 1111</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="small text-center mb-0">© 2026 Atelier — tutti i diritti riservati</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
